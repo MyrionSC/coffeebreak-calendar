@@ -20,4 +20,4 @@ schedule = list(map(lambda dt: construct_day_groups(dt, people), dateList))
 
 # save groups into schedule.json file
 save_json_file_from_dict(schedule, "../data/schedule.json")
-print("schedule succesfully generated and put here: " + os.path.abspath("../data/schedule.json"))
+print("schedule successfully generated and put here: " + os.path.abspath("../data/schedule.json"))

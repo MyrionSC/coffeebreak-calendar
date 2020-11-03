@@ -29,3 +29,7 @@ def load_json_from_file(filename):
 def save_json_file_from_dict(d, filename):
     with open(filename, 'w', encoding='utf-8') as fp:
         json.dump(d, fp, ensure_ascii=False)
+
+def write_string_to_file(str, filename):
+    with open(filename, 'w', encoding='utf-8') as fp:
+        fp.write(str)

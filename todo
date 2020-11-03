@@ -11,6 +11,7 @@ programs:
 	  props:
 	    days: [
 		  ISO: string,
+		  ISO_DK: String,
 		  groups: [
 			employees: [
 			  name: String,

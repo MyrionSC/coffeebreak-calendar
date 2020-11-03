@@ -17,3 +17,6 @@ Kildekode for N1 kaffepause kalendar som er hostet på https://marand.dk/n1-kaff
 - Måske en teams bot, som sender en besked til dem der skal stå for en kaffepause en given dag
 - Måske er en gang om dagen for meget? Nu får vi se
 
+Alle PRs er velkomne
+
+

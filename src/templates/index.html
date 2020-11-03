@@ -14,8 +14,9 @@
 </header>
 
 <div class="content-container">
+    {% for day in schedule -%}
     <div class="day-container">
-        <span class="day-header">Mandag 23/11/2020</span>
+        <span class="day-header">{{ day.day_name_dk }} {{ day.ISO }}</span>
         <div class="group-container">
             <div class="group">
                 <p class="person">Martin Raunkjær Andersen</p>
@@ -29,12 +30,10 @@
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
 
 
-<!--{% for day in schedule -%}-->
-<!--<p> {{ day.ISO }} {{ day.ISO_DK }} </p>-->
-<!--{% endfor %}-->
 
 </body>
 </html>

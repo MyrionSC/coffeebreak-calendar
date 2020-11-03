@@ -3,15 +3,24 @@ import random
 from datetime import datetime
 from typing import List, Dict
 
+
+
 # split people into random sets of people of length 3-4
 def construct_day_groups(dt: datetime, people: List[Dict]):
     # TODO: Some form of uniform distribution would make sense, but I am lazy
     random.shuffle(people)
     return {
-        "ISO": dt.isoformat(),
-        "data_dk": dt.strftime("%d/%m/%Y"),
+        "ISO": dt.strftime("%Y-%m-%d"),
+        "day_name_dk": translate_weekday_dk(dt.weekday()),
+        "date_dk": dt.strftime("%d/%m"),
         "groups": list(chunks(people, 3))
     }
+
+
+def translate_weekday_dk(weekday):
+    t_dict = {0: "Mandag", 1: "Tirsdag", 2: "Onsdag", 3: "Torsdag", 4: "Fredag", 5: "Lørdag", 6: "Søndag"}
+    return t_dict.get(weekday, "Could not find day")
+
 
 # Thanks SO
 def chunks(lst, n):
@@ -33,3 +42,4 @@ def save_json_file_from_dict(d, filename):
 def write_string_to_file(str, filename):
     with open(filename, 'w', encoding='utf-8') as fp:
         fp.write(str)
+

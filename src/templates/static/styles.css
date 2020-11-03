@@ -4,9 +4,12 @@ html, body {
 
 /* HEADER */
 .header-container {
+    position: fixed;
+    left: 50%;
     display: flex;
     width: 550px;
     margin: 40px auto;
+    margin-left: -275px;
 }
 .header-text {
     padding: 30px;
@@ -18,9 +21,11 @@ html, body {
     height: 6em;
 }
 
-/* HEADER */
+/* CONTENT */
 .content-container {
     display: flex;
+    position: absolute;
+    top: 200px;
 }
 .day-container {
     display: block;

@@ -1,0 +1,31 @@
+data:
+  employees.json
+    props:
+	  name: String,
+	  email: String
+
+programs:
+  generate_schedule:
+    in: employees.json
+	out: schedule.json
+	  props:
+	    days: [
+		  ISO: string,
+		  groups: [
+			employees: [
+			  name: String,
+			  email: String
+			]
+		  ]
+		[
+
+  generate_frontend:
+    use jinja?
+    in: employees.json
+	out: index.html
+
+  send_mails:
+    in: schedule.json
+	out: mail.log
+	behaviour:
+	  for current day, send mail

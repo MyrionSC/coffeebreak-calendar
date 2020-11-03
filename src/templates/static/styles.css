@@ -1,0 +1,55 @@
+html, body {
+    background: #fbfbfb;
+}
+
+/* HEADER */
+.header-container {
+    display: flex;
+    width: 550px;
+    margin: 40px auto;
+}
+.header-text {
+    padding: 30px;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* This is for you Casper */
+}
+.coffee-img {
+    height: 6em;
+}
+
+/* HEADER */
+.content-container {
+    display: flex;
+}
+.day-container {
+    display: block;
+    width: 200px;
+    padding: 1em;
+    /*border: solid 1px gray;*/
+}
+.day-header {
+    margin: 1em 0;
+    font-size: 1.2em
+}
+.group-container {
+    margin-top 10px
+    padding 0.5em;
+    /*border: solid 1px gray;*/
+}
+.group {
+    margin: 1em 0;
+}
+.person {
+    margin: 0.4em 0.7em;
+    margin-right: 0;
+}
+.person:first-child {
+    margin-left: 0.2em;
+    font-weight: bold;
+}
+
+
+
+
+

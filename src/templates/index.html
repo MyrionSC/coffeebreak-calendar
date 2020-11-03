@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
 
-{% for day in schedule -%}
-<p> {{ day.ISO }} {{ day.ISO_DK }} </p>
-{% endfor %}
+<!--Header-->
+<header class="header-container">
+    <span class="header-text">N1 kaffepause kalender</span>
+    <img class="coffee-img" src="static/images/animated-coffee-cup-transparant.png">
+</header>
+
+<div class="content-container">
+    <div class="day-container">
+        <span class="day-header">Mandag 23/11/2020</span>
+        <div class="group-container">
+            <div class="group">
+                <p class="person">Martin Raunkjær Andersen</p>
+                <p class="person">Martin Raunkjær Andersen</p>
+                <p class="person">Martin Raunkjær Andersen</p>
+            </div>
+            <div class="group">
+                <p class="person">Martin Raunkjær Andersen</p>
+                <p class="person">Martin Raunkjær Andersen Ekstra langt navn</p>
+                <p class="person">Martin Raunkjær Andersen</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--{% for day in schedule -%}-->
+<!--<p> {{ day.ISO }} {{ day.ISO_DK }} </p>-->
+<!--{% endfor %}-->
 
 </body>
 </html>

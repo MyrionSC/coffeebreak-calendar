@@ -19,7 +19,7 @@
 
 <div class="content-container">
     {% for day in schedule -%}
-    <div data-data-iso="{{day.ISO}}" class="day-container">
+    <div data-date-iso="{{day.ISO}}" class="day-container">
         <span class="day-header">{{ day.day_name_dk }} {{ day.date_dk }}</span>
         <div class="group-container">
             {% for group in day.groups -%}

@@ -31,11 +31,14 @@ html, body {
     display: block;
     width: 200px;
     padding: 1em;
-    /*border: solid 1px gray;*/
+}
+.day-container.active {
+    border: solid 2px darkgreen;
 }
 .day-header {
     margin: 1em 0;
-    font-size: 1.2em
+    font-size: 1.2em;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* This is for you Casper */
 }
 .group-container {
     margin-top 10px

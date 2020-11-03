@@ -16,18 +16,15 @@
 <div class="content-container">
     {% for day in schedule -%}
     <div class="day-container">
-        <span class="day-header">{{ day.day_name_dk }} {{ day.ISO }}</span>
+        <span class="day-header">{{ day.day_name_dk }} {{ day.date_dk }}</span>
         <div class="group-container">
+            {% for group in day.groups -%}
             <div class="group">
-                <p class="person">Martin Raunkjær Andersen</p>
-                <p class="person">Martin Raunkjær Andersen</p>
-                <p class="person">Martin Raunkjær Andersen</p>
+                {% for person in group -%}
+                <p class="person">{{ person.name }}</p>
+                {% endfor %}
             </div>
-            <div class="group">
-                <p class="person">Martin Raunkjær Andersen</p>
-                <p class="person">Martin Raunkjær Andersen Ekstra langt navn</p>
-                <p class="person">Martin Raunkjær Andersen</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
     {% endfor %}

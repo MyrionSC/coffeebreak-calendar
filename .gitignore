@@ -142,3 +142,4 @@ cython_debug/
 people.json
 data/
 
+backups/

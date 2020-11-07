@@ -11,9 +11,10 @@ if os.path.exists("../data") is False:
 # load people.json
 people = load_json_from_file("../data/people.json")
 
-# create list of 365 next days
+# create list of 365 next days and filter for wednesdays
 today = datetime.today()
 dateList = [today + timedelta(days=i) for i in range(365)]
+dateList = list(filter(lambda x: x.weekday() == 2, dateList))
 
 # create groups for each day
 schedule = list(map(lambda dt: construct_day_groups(dt, people), dateList))

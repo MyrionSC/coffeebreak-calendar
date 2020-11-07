@@ -1,3 +1,36 @@
 #!/usr/bin/env python3
 
-print("hello world")
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from helper_functions import read_template, load_json_from_file
+
+# load creds
+creds = load_json_from_file("../data/email-creds.json")
+smtp_host, smtp_port = creds["host"], creds["port"]
+mail_user, mail_password = creds["user"], creds["password"]
+
+# start server
+s = smtplib.SMTP(host=smtp_host, port=smtp_port)
+s.starttls()
+s.login(user=mail_user, password=mail_password)
+
+# construct message body
+message_template = read_template("templates/mail.txt")
+message_body = message_template.substitute(PERSON_NAME="Martin Raunkjær Andersen")
+
+# construct message
+msg = MIMEMultipart()
+msg['From'] = mail_user
+msg['To'] = mail_user
+msg['Subject'] = "hello there"
+msg.attach(MIMEText(message_body, 'plain'))
+
+# send message
+s.send_message(msg)
+
+del msg
+
+
+# I have the following in my crontab file (execute at 7.30 am)
+# 30 7 * * * /home/marand/scripts/send_emails > /home/marand/logs/send_emails.log 2>&1

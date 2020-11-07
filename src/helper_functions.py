@@ -1,8 +1,8 @@
 import json
 import random
 from datetime import datetime
+from string import Template
 from typing import List, Dict
-
 
 
 # split people into random sets of people of length 3-4
@@ -31,6 +31,12 @@ def chunks(lst, n):
         else:
             yield lst[i:i + n]
 
+### Files
+def read_template(filename):
+    with open(filename, 'r', encoding='utf-8') as template_file:
+        template_file_content = template_file.read()
+    return Template(template_file_content)
+
 def load_json_from_file(filename):
     with open(filename, encoding='utf-8') as f_in:
         return json.load(f_in)
@@ -42,4 +48,3 @@ def save_json_file_from_dict(d, filename):
 def write_string_to_file(str, filename):
     with open(filename, 'w', encoding='utf-8') as fp:
         fp.write(str)
-

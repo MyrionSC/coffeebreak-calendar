@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 from helper_functions import read_template, load_json_from_file
 
 # load creds
-creds = load_json_from_file("../data/email-creds.json")
+creds = load_json_from_file("email-creds.json")
 smtp_host, smtp_port = creds["host"], creds["port"]
 mail_user, mail_password = creds["user"], creds["password"]
 
@@ -16,7 +16,7 @@ s.starttls()
 s.login(user=mail_user, password=mail_password)
 
 # construct message body
-message_template = read_template("templates/mail.txt")
+message_template = read_template("mail.txt")
 message_body = message_template.substitute(PERSON_NAME="Martin Raunkjær Andersen")
 
 # construct message

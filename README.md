@@ -11,6 +11,7 @@ Kildekode for N1 kaffepause kalendar som er hostet på https://marand.dk/n1-kaff
 ### Mulige forbedringer
 
 - schedule_generator: uniform fordeling, så folk mødes med så mange som muligt / folk skal stå lige meget for kaffepauser. Det er bare tilfældigt lige nu.
+- schedule_generator: Tag ikke weekend dage med :P
 - generate_frontend: centrer på nuværende dag
 - generate_frontend: Pænere frontend + mobilvenlig
 - send_mails: Implementer
